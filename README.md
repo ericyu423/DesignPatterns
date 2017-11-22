@@ -20,6 +20,11 @@ so you can do
     
     let shared = MySingleton.shareInstance
     x = shared.adID
+    
+or
+
+    MySingleton.shareInstance.adID
+    
 while     
     
     private init()
