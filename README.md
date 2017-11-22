@@ -9,15 +9,22 @@
         }
         
 explanation:
-
-*static make "shareInstance" a class variable 
+     
+     static
+makes 
+     
+     shareInstance
+a class variable 
   
 so you can do 
+    
     let shared = MySingleton.shareInstance
-    
     x = shared.adID
+while     
     
-* private init()
+    private init()
 
-this prevents you to let x = MySingleton()
-prevent you to create other instance/copy of this class
+prevents you to do
+
+        let x = MySingleton()
+so you will not allow to create other instance/copy of this class (since it is a singleton)
