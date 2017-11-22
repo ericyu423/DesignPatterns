@@ -13,7 +13,8 @@ explanation:
 *static make "shareInstance" a class variable 
   
 so you can do 
-    let shared = MySingleton.shareInstance 
+    let shared = MySingleton.shareInstance
+    
     x = shared.adID
     
 * private init()
