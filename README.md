@@ -76,12 +76,10 @@ Example 2
  //completion() is the caller can throw in bunch of code statements and make this function
  //execute them
  
-                 struct Vendor {
+               struct Vendor {
                     let name:String
                     let phone:String
                 }
-
-
                 class Manager: NSObject {
 
                     private var vendor = Vendor(name: "eric", phone: "1-888-1234")
@@ -92,36 +90,26 @@ Example 2
                         //that class should have a function that fetch stuff
                         //and a completion handeler that give the information
                         //back to here
-
                         //info is some stuct that contain updated data
-
-                            self.vendor = Vendor(name: info.name,
-                                                        phone: info.number
-                                                        )
+                            self.vendor = Vendor(name: info.name, phone: info.number )
                             completion()
                         }
                     }
-
                 }
 
 how to use this: In some class you can update the contract information and change your UI
- 
 
                 private var vendor: Vendor {
-                                 return Manager.shared.vendor
+                     return Manager.shared.vendor
                 }
                 
                  Manager.shared.updateContactInformation(){
                           label.text = vendor.name 
-                          
                           //updateContractInformation updated the vendor struct inside Manger()
-                          //we get vendor.name...which is access from vendor variable
-                          //something like vendor {return vendorStruct)
-                          
-                              var vendor:Vendor { return defaultVendor}
-                        }
+                          //we get vendor.name  vender fectch from  Manager()
+                          //something like var vendor:Vendor { return defaultVendor}}
                  }
-                        print("Updating vendor contact information after login...")
+                        print("Updating vendor contact information after login")
                  }
                  
                  
