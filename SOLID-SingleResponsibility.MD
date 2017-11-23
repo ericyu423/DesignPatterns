@@ -37,7 +37,7 @@
 
 //now all these class can be tested
 
-//all function can all be statics 
+//all function can all be statics, in simple claases like this...is the same as..i guess making it a global function.
 
           class Handler {
               func handle() {
@@ -47,9 +47,9 @@
               }
           }
 
-          class APIHandler { func request() -> Data {}}
-          class ParseHandler { func parse(data: Data) -> [String] {} } 
-          class DBHandler { func save(array: [String]) {} }
+          class APIHandler { static func request() -> Data {}}
+          class ParseHandler { static func parse(data: Data) -> [String] {} } 
+          class DBHandler { static func save(array: [String]) {} }
 
 
 /***********************************************************************************************************/
