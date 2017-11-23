@@ -45,6 +45,9 @@ what we have it that, you need to add a new loop just to print bikes
 
             class Logger {
                 func printData() {
+                    var car:Car! //for testing
+                    var bike: Bicycle!//for testing
+                    
                     let vehicles: [Printable] = [
                         Car(name: "X", color: "a"),
                         Car(name: "Y", color: "b"),
@@ -54,6 +57,15 @@ what we have it that, you need to add a new loop just to print bikes
                     ]
                     vehicles.forEach { vehicle in
                         print(vehicle.printDetails())
+                        
+                        car = vehicles[0] as! Car //for testing
+                        print(car) //for testing
+                        bike = vehicles[3] as! Bicycle //for testing
+                        print(bike) //for testing
+                        car = vehicles[3] as! Bicycle //error - for testing
+                        print(car) //error - for testing
+                        
+                        
                     }
                 }
             }
